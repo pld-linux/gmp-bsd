@@ -1,13 +1,15 @@
 --- gmp-5.0.5/configure.in.orig	2012-05-09 18:42:22.071302791 +0200
 +++ gmp-5.0.5/configure.in	2012-05-09 18:43:35.227967934 +0200
-@@ -65,7 +65,7 @@
+@@ -65,8 +65,8 @@
  dnl  Note that there's a copy of these options in the top-level Makefile.am,
  dnl  so update there too if changing anything.
  dnl
 -AM_INIT_AUTOMAKE([1.8 gnu no-dependencies $(top_builddir)/ansi2knr])
+-AM_CONFIG_HEADER(config.h:config.in)
 +AM_INIT_AUTOMAKE([1.8 gnu no-dependencies])
- AM_CONFIG_HEADER(config.h:config.in)
++AC_CONFIG_HEADERS([config.h:config.in])
  AM_MAINTAINER_MODE
+ 
  
 @@ -2231,9 +2231,6 @@
  echo "      MPN_PATH=\"$path\""
