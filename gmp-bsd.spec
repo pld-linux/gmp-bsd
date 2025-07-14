@@ -59,14 +59,14 @@ na GNU MP.
 
 %prep
 %setup -q -n gmp-%{version}
-%patch0 -p1
+%patch -P0 -p1
 %ifarch %{ix86} %{x8664} ppc ppc64 s390 s390x sparc sparcv9 sparc64
 # ugly hack, don't apply on other archs (also recheck sizes on each upgrade)
-%patch1 -p1
+%patch -P1 -p1
 %endif
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
+%patch -P2 -p1
+%patch -P3 -p1
+%patch -P4 -p1
 
 %build
 %{__libtoolize}
